@@ -1,0 +1,20 @@
+﻿@model Crachevent.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contato";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@Model.name</h3>
+
+<address>
+    @Model.city<br />
+    @Model.street, @Model.number<br />
+    <abbr title="Telefone">Fone:</abbr>
+    @Model.phoneNumber
+</address>
+
+<address>
+    <strong>Email:</strong>   <a href="mailto:bruno.queiroz2011@gmail.com">@Model.email</a><br />
+    <strong>Linkedin:</strong> <a target="_blank" href="https://www.linkedin.com/in/brunogoncalvesqueiroz/">@Model.linkedin</a><br />
+    <strong>Github:</strong> <a target="_blank" href="https://github.com/brunoqueiroz2011">@Model.github</a><br />
+    <strong>WordPress:</strong> <a target="_blank" href="https://brunogoncalvesqueiroz.wordpress.com/">@Model.wordpress</a>
+</address>

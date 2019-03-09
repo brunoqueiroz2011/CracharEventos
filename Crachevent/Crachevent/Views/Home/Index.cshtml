@@ -1,0 +1,37 @@
+﻿@model Crachevent.Models.Pessoa
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<div class="jumbotron">
+    <h1>Crachevent</h1>
+    <p class="lead">Aqui você pode criar o seu crachar ideal para o seu evento.</p>
+    <p><a target="_blank" href="https://blog.even3.com.br/crachas-para-eventos-academicos/" class="btn btn-primary btn-lg">Dicas de Templates &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>1 - Criar Modelo</h2>
+        <form method="post" enctype="multipart/form-data" asp-controller="PostImg" asp-action="PostImg">
+            <div class="form-group">
+                <div class="col-md-10">                    
+                    <input type="file" name="files" multiple />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" value="Upload" />
+                </div>
+            </div>
+        </form>
+        <img srcset="~/Content/Imagens/cracha01.png" width="300" height="400"/>
+    </div>
+    <div class="col-md-4">
+        <h2>2 - Importar Participantes</h2>
+        @Html.TextArea("Description", null, new { @class = "form-control" })
+    </div>
+    <div class="col-md-4">
+        <h2>3 - Baixar</h2>
+        <input type="submit" class="btn btn-default" value="Baixar Crachás" />
+    </div>
+</div>
